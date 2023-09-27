@@ -14,6 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 //parameter is the type of the dbcontext
 //AddDbcontext is a generic method that is used to add the dbcontext to the services container
 
+//we add applicationdbcontext to the services container so that we can use it in the controller class to access the database
+
 
 var app = builder.Build();// Build the app.
 
