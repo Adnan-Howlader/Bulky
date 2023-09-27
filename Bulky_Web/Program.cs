@@ -1,9 +1,21 @@
-var builder = WebApplication.CreateBuilder(args);
+using Bulky_Web.Data;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);// Create a builder with the default services configuration.args is the command line arguments passed to the application.
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); // Add MVC services to the services container.
+builder.Services.AddDbContext<ApplicationDbContext>(
+    option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var app = builder.Build();
+
+//option.UseSqlServer() means that we are using sql server as the database
+//option is the parameter of the lambda expression and option is used to configure the options for the dbcontext
+//parameter is the type of the dbcontext
+//AddDbcontext is a generic method that is used to add the dbcontext to the services container
+
+
+var app = builder.Build();// Build the app.
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
