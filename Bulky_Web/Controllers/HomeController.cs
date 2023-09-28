@@ -13,14 +13,14 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index()//this method is called when the user requests the home page
     {
-        return View();
+        return View();//index parameter is passed to the view method
     }
 
-    public IActionResult Privacy()
+    public IActionResult Privacy()//this method is called when the user requests the privacy page
     {
-        return View();
+        return View();//privacy parameter is passed to the view method
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
