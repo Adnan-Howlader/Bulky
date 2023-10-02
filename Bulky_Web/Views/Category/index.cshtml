@@ -1,1 +1,41 @@
-<h1> this is the category page</h1>
+@model List<Category> 
+<!--declaring the type of parameter passed from controller above-->
+
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Category List</h2>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-primary float-end" asp-controller="Category" asp-action="Create">Create New Category</a>
+
+        </div>
+        
+    </div>
+
+
+
+    <table class="table table-bordered table-striped ">
+        <tr>
+            <th>Category Name</th>
+            <th>Display order</th>
+        </tr>
+
+
+
+
+        @foreach (var item in Model.OrderBy(u => u.DisplayOrder)) //Model is the list of category object passed from controller
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.DisplayOrder</td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+

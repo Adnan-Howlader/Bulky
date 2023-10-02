@@ -17,7 +17,16 @@ public class ApplicationDbContext:DbContext
     
     //dbset<> is used to create a table in the database and pass the model class as the parameter
     
-    
    
-    
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)//this method is used to configure the model that was created
+    {
+        
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 1,Name = "Action",DisplayOrder = 1});
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 2,Name = "Comedy",DisplayOrder = 2});
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 3,Name = "Drama",DisplayOrder = 3});
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 4,Name = "Horror",DisplayOrder = 4});
+           
+        
+    }
 }

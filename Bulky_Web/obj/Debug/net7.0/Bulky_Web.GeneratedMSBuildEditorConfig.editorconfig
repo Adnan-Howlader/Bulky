@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Views/Category/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvY3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Views/Category/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
