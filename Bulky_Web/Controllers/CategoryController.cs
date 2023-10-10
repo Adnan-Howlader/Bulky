@@ -1,4 +1,5 @@
 using Bulky_Web.Data;
+using Bulky_Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bulky_Web.Controllers;
@@ -22,8 +23,22 @@ public class CategoryController : Controller
     
     public IActionResult Create()
     {
-        return View();//how view knows which view to return??  //create.cshtml
+        return View();//how view knows which view to return??  //it passes the name of the action method in the view
     }
+
+    [HttpPost]//what is this attribute?? //it is an attribute that tells the compiler that this method is a post method
+    public IActionResult Create(Category obj)
+    {
+        
+        //create a category object
+        _db.Categories.Add(obj);//add changes to dbcontext of entity framework 
+        _db.SaveChanges();//make all the changes migrate and from migration update the database (internal migration)
+        return RedirectToAction("Index","Category");//redirect to the index action method
+
+        
+
+    }
+    
     
     
 }

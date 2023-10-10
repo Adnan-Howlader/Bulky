@@ -26,6 +26,9 @@ public class ApplicationDbContext:DbContext
         modelBuilder.Entity<Category>().HasData(new Category{Id = 2,Name = "Comedy",DisplayOrder = 2});
         modelBuilder.Entity<Category>().HasData(new Category{Id = 3,Name = "Drama",DisplayOrder = 3});
         modelBuilder.Entity<Category>().HasData(new Category{Id = 4,Name = "Horror",DisplayOrder = 4});
+      
+       
+    
            
         
     }
