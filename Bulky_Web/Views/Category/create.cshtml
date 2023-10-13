@@ -17,18 +17,25 @@
             <label asp-for="Id"></label><!--asp-for is used to bind the label with the model property-->
             <input asp-for="Id" class="form-control"  /> <!--asp-for is used to bind the input with the model property-->
             <!--input type is controlled by the model property type-->
+            <!--show the error message if there is any-->
+            <span asp-validation-for="Id" class="text-danger"></span> <!--it will show the error if we submit the form-->
+            
         </div>
    
         <div class="p-2">
             <label asp-for="Name"></label><!--asp-for is used to bind the label with the model property-->
             <input asp-for="Name" class="form-control" /> <!--asp-for is used to bind the input with the model property-->
             <!--input type is controlled by the model property type-->
+             <!--show the error message if there is any-->
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         
         <div class="p-2">
             <label asp-for="DisplayOrder"></label> 
             <input  asp-for="DisplayOrder" class="form-control" />
-             <!--input type is controlled by the model property type-->
+            <!--input type is controlled by the model property type-->
+             <!--show the error message if there is any-->
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
         </div>
         
         <div class="p-2">

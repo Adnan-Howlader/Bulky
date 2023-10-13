@@ -17,10 +17,16 @@ public class Category
 
     [Required]
     [DisplayName("Category Name")]
+    [MaxLength(20)]
     public string Name { get; set; }
-    
+
     [Required]
     //create DisplayOrder property
     [DisplayName("Display Order")]
-    public int DisplayOrder { get; set; }
+    [Range(1, 100)]
+
+    public int DisplayOrder { get; set; } 
+    //set the display order to 1 by default
+
+
 }

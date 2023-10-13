@@ -29,11 +29,22 @@ public class CategoryController : Controller
     [HttpPost]//what is this attribute?? //it is an attribute that tells the compiler that this method is a post method
     public IActionResult Create(Category obj)
     {
+        if (ModelState.IsValid)//what is this?? //it is a property of the controller class that checks if the model is valid or not
+        {
+            //create a category object
+            _db.Categories.Add(obj);//add changes to dbcontext of entity framework 
+            _db.SaveChanges();//make all the changes migrate and from migration update the database (internal migration)
+            return RedirectToAction("Index","Category");//redirect to the index action method
+        }
+        else
+        {
+            //handle error
+            return View(obj);
+            
+        }
+      
+
         
-        //create a category object
-        _db.Categories.Add(obj);//add changes to dbcontext of entity framework 
-        _db.SaveChanges();//make all the changes migrate and from migration update the database (internal migration)
-        return RedirectToAction("Index","Category");//redirect to the index action method
 
         
 
