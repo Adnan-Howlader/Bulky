@@ -23,7 +23,9 @@ public class Category
     [Required]
     //create DisplayOrder property
     [DisplayName("Display Order")]
-    [Range(1, 100)]
+    //change the error message
+    
+    [Range(1, 100,ErrorMessage = "Display Order for category must be from 1 to 100")]
 
     public int DisplayOrder { get; set; } 
     //set the display order to 1 by default

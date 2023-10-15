@@ -1,6 +1,6 @@
 @model Category
 <!--category is a model class-->
-<!--we did not pass any model class to the view so it will auto create Category object with default value-->
+<!--if we did not pass any model class to the view so it will auto create Category object with default value-->
 
 
 
@@ -13,12 +13,13 @@
         <h2>Create category</h2>
         
         <!--create a div for ID-->
+        
         <div class="p-2">
             <label asp-for="Id"></label><!--asp-for is used to bind the label with the model property-->
             <input asp-for="Id" class="form-control"  /> <!--asp-for is used to bind the input with the model property-->
             <!--input type is controlled by the model property type-->
             <!--show the error message if there is any-->
-            <span asp-validation-for="Id" class="text-danger"></span> <!--it will show the error if we submit the form-->
+            <span asp-validation-for="Id" class="text-danger"></span> <!--it will show the error if we submit the form(passing to controller) and has error (server side validation) -->
             
         </div>
    
@@ -26,7 +27,7 @@
             <label asp-for="Name"></label><!--asp-for is used to bind the label with the model property-->
             <input asp-for="Name" class="form-control" /> <!--asp-for is used to bind the input with the model property-->
             <!--input type is controlled by the model property type-->
-             <!--show the error message if there is any-->
+            <!--show the error message if there is any-->
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
         
@@ -34,17 +35,24 @@
             <label asp-for="DisplayOrder"></label> 
             <input  asp-for="DisplayOrder" class="form-control" />
             <!--input type is controlled by the model property type-->
-             <!--show the error message if there is any-->
+            <!--show the error message if there is any-->
             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
         </div>
         
         <div class="p-2">
             <input type="submit" value="Create" class="btn btn-primary" />
             <a asp-controller="Category" asp-action="Index" class="btn btn-primary">Back to list</a>
-            </div>
+        </div>
             
         
     </div>
 
 
 </form>
+
+@*creating client side validation*@
+@section Scripts{
+    @*contains the script for client side validation*@
+    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} <!--this will render the validation script-->
+}

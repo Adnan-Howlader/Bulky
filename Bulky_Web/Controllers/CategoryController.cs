@@ -29,6 +29,13 @@ public class CategoryController : Controller
     [HttpPost]//what is this attribute?? //it is an attribute that tells the compiler that this method is a post method
     public IActionResult Create(Category obj)
     {
+        //if object category name and display order is same ,add error
+        if (obj.Name==obj.DisplayOrder.ToString())
+        {
+            ModelState.AddModelError("Name","Category Name and Display Order cannot be same");
+        }
+        
+        
         if (ModelState.IsValid)//what is this?? //it is a property of the controller class that checks if the model is valid or not
         {
             //create a category object
@@ -36,16 +43,9 @@ public class CategoryController : Controller
             _db.SaveChanges();//make all the changes migrate and from migration update the database (internal migration)
             return RedirectToAction("Index","Category");//redirect to the index action method
         }
-        else
-        {
-            //handle error
-            return View(obj);
-            
-        }
-      
-
         
-
+        return View(obj);
+            
         
 
     }
