@@ -3,6 +3,10 @@
 
 
 
+<!--include partial view for notification-->
+@Html.Partial("_Notification")
+
+
 <div class="container">
     
     <div class="row">
@@ -22,6 +26,7 @@
         <tr>
             <th>Category Name</th>
             <th>Display order</th>
+            <th></th>
         </tr>
 
 
@@ -32,6 +37,17 @@
             <tr>
                 <td>@item.Name</td>
                 <td>@item.DisplayOrder</td>
+                <td>
+                  
+                    
+                    <a class="btn btn-primary h-40" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil-square">Edit</i>
+                    </a>
+                    <a class="btn btn-primary h-40" asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="bi bi-trash">Delete</i>
+                    </a>
+
+                </td>
             </tr>
         }
 
