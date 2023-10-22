@@ -1,4 +1,6 @@
-using Bulky_Web.Data;
+using Bulky.DataAccess.Data;
+using Bulky.DataAccess.Repository;
+using Bulky.DataAccess.Repository.iRepository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);// Create a builder with the default services configuration.args is the command line arguments passed to the application.
@@ -7,6 +9,9 @@ var builder = WebApplication.CreateBuilder(args);// Create a builder with the de
 builder.Services.AddControllersWithViews(); // Add MVC services to the services container.
 builder.Services.AddDbContext<ApplicationDbContext>(
     option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<iCategoryRepository, CategoryRepository>();//AddScoped means that the object will be created once per request within the scope
+//here we are addding dependency injection of implementation of icategoryrepository to categoryrepository
 
 
 //option.UseSqlServer() means that we are using sql server as the database
