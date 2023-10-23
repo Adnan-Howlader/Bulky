@@ -11,9 +11,14 @@ public class ApplicationDbContext:DbContext
         //dbcontextoptions is used to configure the options for the dbcontext
         
     }
+    //create onconfiguring method
+  
+    
+    
     
     //create a category property
     public DbSet<Category> Categories { get; set; }
+    
     
     //dbset<> is used to create a table in the database and pass the model class as the parameter
     
@@ -26,6 +31,7 @@ public class ApplicationDbContext:DbContext
         modelBuilder.Entity<Category>().HasData(new Category{Id = 2,Name = "Comedy",DisplayOrder = 2});
         modelBuilder.Entity<Category>().HasData(new Category{Id = 3,Name = "Drama",DisplayOrder = 3});
         modelBuilder.Entity<Category>().HasData(new Category{Id = 4,Name = "Horror",DisplayOrder = 4});
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 5,Name = "Sci-Fi",DisplayOrder = 5});
       
        
     
