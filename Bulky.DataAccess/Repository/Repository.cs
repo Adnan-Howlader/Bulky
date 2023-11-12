@@ -24,7 +24,7 @@ public class Repository<T>:iRepository<T> where T : class
         return query.ToList();
     }
 
-    public T Get(Expression<Func<T,bool>>filter)//x=>filter where T is parameter,filter is the expression and returns bool
+    public T Get(Expression<Func<T,bool>>filter)//T=>filter where T is parameter,filter is the expression and returns bool
     {
         IQueryable<T> query = dbSet;//IQueryable is a collection of entities that can be queried from the database
         query= query.Where(filter);//we are filtering the query

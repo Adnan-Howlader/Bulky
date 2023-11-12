@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Bulky.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 
 namespace Bulky.DataAccess.Data;
 
-public class ApplicationDbContext:DbContext 
+public class ApplicationDbContext:IdentityDbContext 
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options)//base is used to call the constructor of the parent class
     {
@@ -19,6 +20,8 @@ public class ApplicationDbContext:DbContext
     //create a category property
     public DbSet<Category> Categories { get; set; }
     
+    public DbSet<Product> Products { get; set; }
+    
     
     //dbset<> is used to create a table in the database and pass the model class as the parameter
     
@@ -27,15 +30,12 @@ public class ApplicationDbContext:DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)//this method is used to configure the model that was created
     {
         
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Category>().HasData(new Category{Id = 1,Name = "Action",DisplayOrder = 1});
-        modelBuilder.Entity<Category>().HasData(new Category{Id = 2,Name = "Comedy",DisplayOrder = 2});
-        modelBuilder.Entity<Category>().HasData(new Category{Id = 3,Name = "Drama",DisplayOrder = 3});
-        modelBuilder.Entity<Category>().HasData(new Category{Id = 4,Name = "Horror",DisplayOrder = 4});
-        modelBuilder.Entity<Category>().HasData(new Category{Id = 5,Name = "Sci-Fi",DisplayOrder = 5});
-      
-       
-    
-           
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 2,Name = "Fantasy",DisplayOrder = 2});
+        modelBuilder.Entity<Category>().HasData(new Category{Id = 3,Name = "Romance",DisplayOrder = 3});
+
+        
         
     }
 }
