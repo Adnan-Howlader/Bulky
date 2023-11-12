@@ -16,13 +16,13 @@ namespace Bulky.Models;
         //declare nullable string
 
         [Required]
-        [DisplayName("Category Name")]
+       
         [MaxLength(20)]
         public string Name { get; set; }
 
         [Required]
         //create DisplayOrder property
-        [DisplayName("Display Order")]
+        
         //change the error message
 
         [Range(1, 100, ErrorMessage = "Display Order for category must be from 1 to 100")]
