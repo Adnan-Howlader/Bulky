@@ -1,5 +1,8 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
+using System.Net.Mime;
 
 namespace Bulky.Models;
 
@@ -10,36 +13,39 @@ public class Product
     
     [Required]
     public string Title { get; set; }
+    [Required]
     public string Description { get; set; }
+    
     
     [Required]
     public string Director { get; set; }
     
     [Required]
     [Range(1,1000)]
-    public string ListPrice { get; set; }
-    
-    [Required]
-    [Range(1,1000)]
-    [DisplayName("Price 1-50")]//this is the name that will be displayed on the page
     public double Price { get; set; }
     
+    //make a foreign key of category
     [Required]
-    [Range(1,1000)]
-    [DisplayName("Price for 50+")]
-    public double Price50 { get; set; }
+    public int CategoryId { get; set; }
     
-    [Required]
-    [Range(1,1000)]
-    [DisplayName("Price for 100+")]
-    public double Price100 { get; set; }
+    [ForeignKey("CategoryId")]
+    public Category Category { get; set; }
     
-    
-    
-    
+    [DefaultValue('s')]
+    public string ImageUrl { get; set; }
     
    
     
+    
+    
+
+    
+   
+    
+    
+    
+    
+
     
     
 }
