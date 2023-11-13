@@ -2,6 +2,7 @@ using Bulky.DataAccess.Data;
 using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.iRepository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);// Create a builder with the default services configuration.args is the command line arguments passed to the application.
 
@@ -10,16 +11,23 @@ builder.Services.AddControllersWithViews(); // Add MVC services to the services 
 builder.Services.AddDbContext<ApplicationDbContext>(
     option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+//AddIdentity is a generic method that is used to add the identity to the services container
+
 builder.Services.AddScoped<iCategoryRepository, CategoryRepository>();//AddScoped means that the object will be created once per request within the scope
-//here we are addding dependency injection of implementation of icategoryrepository to categoryrepository
+//here we are addding dependency injection of implementation of icategoryrepository by categoryrepository
 
-
+builder.Services.AddScoped<iProductRepository, ProductRepository>();
 //option.UseSqlServer() means that we are using sql server as the database
 //option is the parameter of the lambda expression and option is used to configure the options for the dbcontext
 //parameter is the type of the dbcontext
 //AddDbcontext is a generic method that is used to add the dbcontext to the services container
 
 //we add applicationdbcontext to the services container so that we can use it in the controller class to access the database
+
+//add service for razor page 
+builder.Services.AddRazorPages();
+
 
 
 var app = builder.Build();// Build the app.
@@ -37,7 +45,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
+app.MapRazorPages(); 
 
 app.MapControllerRoute(
     name: "default",

@@ -1,19 +1,83 @@
-@page
-@model Bulky_Web.Areas.Admin.Views.Product.Delete
+@model Product
+<!--what it means?-->
 
-@{
-    Layout = null;
-}
+<!--model is populated with specific controller of the view-->
+<!--model is used to pass data from controller to view and vice versa(post method)-->
+<!--if model is not specified then it will be object by default-->
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
-    
-</div>
-</body>
-</html>
+
+
+
+
+
+<!--create a form to submit data to the controller-->
+
+
+<form method="post">
+    <div class="border p-4 mb-4">
+        <h2>delete product</h2>
+        
+        <!--create a div for ID-->
+        
+     
+        @* create a hidden property of id because id might be set to 0 and 0 means create new obj in db *@
+        <input type="hidden" asp-for="Id" />
+        
+   
+        <div class="p-2">
+            <label asp-for="Title"></label><!--asp-for is used to bind the label with the model property-->
+            <input asp-for="Title" class="form-control" disabled/> <!--asp-for is used to bind the input with the model property-->
+            <!--input type is controlled by the model property type-->
+            <!--show the error message if there is any-->
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        
+          <div class="p-2">
+                    <label asp-for="CategoryId"></label> 
+                    <input  asp-for="CategoryId" class="form-control" />
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+              </div>
+        
+        <div class="p-2">
+            <label asp-for="Description"></label> 
+            <input  asp-for="Description" class="form-control" disabled/>
+            <!--input type is controlled by the model property type-->
+            <!--show the error message if there is any-->
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        
+        <div class="p-2">
+            <label asp-for="Director"></label> 
+            <input  asp-for="Director" class="form-control" disabled/>
+            <!--input type is controlled by the model property type-->
+            <!--show the error message if there is any-->
+            <span asp-validation-for="Director" class="text-danger"></span>
+        </div>
+        
+        <div class="p-2">
+                            <label asp-for="Price"></label> 
+                            <input  asp-for="Price" class="form-control" disabled />
+                            <!--input type is controlled by the model property type-->
+                            <!--show the error message if there is any-->
+                            <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+        
+        
+        
+        <div class="p-2">
+            <input type="submit" value="delete" class="btn btn-primary" />
+            <a asp-controller="product" asp-action="Index" class="btn btn-primary">Back to list</a>
+        </div>
+            
+        
+    </div>
+
+
+</form>
+<!--what will be posted?-->
+<!--the model class object will be posted to the controller because of first line  -->
+
+

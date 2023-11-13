@@ -1,19 +1,118 @@
-@page
-@model Bulky_Web.Areas.Admin.Views.Product.edit
+@model ProductVM
+<!--what it means?-->
 
-@{
-    Layout = null;
-}
+<!--model is populated with specific controller of the view-->
+<!--model is used to pass data from controller to view and vice versa(post method)-->
+<!--if model is not specified then it will be object by default-->
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
+
+
+
+
+
+
+
+<!--create a form to submit data to the controller-->
+
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-10">
+            <div class="border p-4 mb-4">
+                <h2>Update product</h2>
+            
+                <!--create a div for ID-->
+            
+            
+                @* create a hidden property of id because id might be set to 0 and 0 means create new obj in db *@
+                <input type="hidden" asp-for="Product.Id"/>
+            
+            
+                <div class="p-2">
+                    <label asp-for="Product.Title"></label><!--asp-for is used to bind the label with the model property-->
+                    <input asp-for="Product.Title" class="form-control"/> <!--asp-for is used to bind the input with the model property-->
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="Product.Title" class="text-danger"></span>
+                </div>
+            
+             <div class="p-2">
+                        <label asp-for="Product.CategoryId"></label> 
+                        <select  asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select" >
+                        </select>
+                        <!--input type is controlled by the model property type-->
+                        <!--show the error message if there is any-->
+                        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
+                 </div>
+            
+                <div class="p-2">
+                    <label asp-for="Product.Description"></label>
+                    <input asp-for="Product.Description" class="form-control"/>
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="Product.Description" class="text-danger"></span>
+                </div>
+            
+                <div class="p-2">
+                    <label asp-for="Product.Director"></label>
+                    <input asp-for="Product.Director" class="form-control"/>
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="Product.Director" class="text-danger"></span>
+                </div>
+            
+                <div class="p-2">
+                    <label asp-for="Product.Price"></label>
+                    <input asp-for="Product.Price" class="form-control"/>
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="Product.Price" class="text-danger"></span>
+                </div>
+            
+                <div class="p-2">
+                    <label asp-for="Product.ImageUrl"></label>
+                    <input type="file" name="update_file" asp-for="Product.ImageUrl" class="form-control"/> <!--name is to bind to the function-->
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
+                </div>
+            
+            
+            
+            
+                <div class="p-2">
+                    <input type="submit" value="Update" class="btn btn-primary"/>
+                    <a asp-controller="product" asp-action="Index" class="btn btn-primary">Back to list</a>
+                </div>
+            
+            
+            </div>
+            
+           
+
+        </div>
+        <div class="col-2">
+            
+            
+
+
+            <img src="@Model.Product.ImageUrl" class="img-fluid" alt="image">
+
+
+        </div>
+    </div>
+
+
+
+</form>
+<!--what will be posted?-->
+<!--the model class object will be posted to the controller because of first line  -->
+
+
+@*creating client side validation*@
+@section Scripts{
+    @*contains the script for client side validation*@
     
-</div>
-</body>
-</html>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} <!--this will render the validation script-->
+}

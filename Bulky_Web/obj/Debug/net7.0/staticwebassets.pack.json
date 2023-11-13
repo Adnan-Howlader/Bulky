@@ -5,12 +5,72 @@
       "PackagePath": "staticwebassets/Bulky_Web.bundle.scp.css"
     },
     {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/.DS_Store",
+      "PackagePath": "staticwebassets/images/.DS_Store"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/0e1cf2d7-7764-4f5e-93eb-d29d47e664a0.jpg",
+      "PackagePath": "staticwebassets/images/product/0e1cf2d7-7764-4f5e-93eb-d29d47e664a0.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/4eda0a5a-5039-4c69-b9ac-552cbb088f15.jpg",
+      "PackagePath": "staticwebassets/images/product/4eda0a5a-5039-4c69-b9ac-552cbb088f15.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/708b21a9-9233-4457-976e-0f64f8e86436.jpg",
+      "PackagePath": "staticwebassets/images/product/708b21a9-9233-4457-976e-0f64f8e86436.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/7ebc6f81-73fb-4c86-9193-a8b0fc4b1a00.jpg",
+      "PackagePath": "staticwebassets/images/product/7ebc6f81-73fb-4c86-9193-a8b0fc4b1a00.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/87f93bab-6a94-41ab-bb0e-10e1df32346a.jpg",
+      "PackagePath": "staticwebassets/images/product/87f93bab-6a94-41ab-bb0e-10e1df32346a.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/8c69b9e7-4068-40a1-bcf3-cbc6dfc8e727.jpg",
+      "PackagePath": "staticwebassets/images/product/8c69b9e7-4068-40a1-bcf3-cbc6dfc8e727.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/DarkKnight.jpg",
+      "PackagePath": "staticwebassets/images/product/DarkKnight.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/a4bf648d-6498-4a7d-8c70-e08bba6a74a5.jpg",
+      "PackagePath": "staticwebassets/images/product/a4bf648d-6498-4a7d-8c70-e08bba6a74a5.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/b0099874-753c-45e0-906a-11af61535555.jpg",
+      "PackagePath": "staticwebassets/images/product/b0099874-753c-45e0-906a-11af61535555.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/b4d62173-dce1-420d-850f-f7abf3192cc8.jpg",
+      "PackagePath": "staticwebassets/images/product/b4d62173-dce1-420d-850f-f7abf3192cc8.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/b5c0edab-36a9-4b24-9dfb-73f84617e539.jpg",
+      "PackagePath": "staticwebassets/images/product/b5c0edab-36a9-4b24-9dfb-73f84617e539.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/b7b8404c-c28c-42be-aa3a-5888746e589a.jpg",
+      "PackagePath": "staticwebassets/images/product/b7b8404c-c28c-42be-aa3a-5888746e589a.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/dc5a6882-a6a2-4e9a-b2c8-dfb1cf99010b.jpg",
+      "PackagePath": "staticwebassets/images/product/dc5a6882-a6a2-4e9a-b2c8-dfb1cf99010b.jpg"
     },
     {
       "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/js/site.js",

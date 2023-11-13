@@ -1,19 +1,62 @@
-@page
-@model Bulky_Web.Areas.Admin.Views.Product.index
+@model List<Product> 
+<!--declaring the type of parameter passed from controller above-->
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-<div>
+<!--include partial view for notification-->
+@Html.Partial("_Notification")
+
+
+<div class="container">
     
+    <div class="row">
+        <div class="col-md-6">
+            <h2>product List</h2>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-primary float-end" asp-controller="product" asp-action="Create">Create New product</a>
+
+        </div>
+        
+    </div>
+
+
+
+    <table class="table table-bordered table-striped ">
+        <tr>
+            <th>Title</th>
+            <th>Category_ID</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Director</th>
+            
+        </tr>
+
+
+
+
+        @foreach (var item in Model) //Model is the list of product object passed from controller
+        {
+            <tr>
+                <td>@item.Title</td>
+                <th>@item.CategoryId</th>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.Director</td>
+                
+                <td>
+                  
+                    
+                    <a class="btn btn-primary h-40" asp-controller="product" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil-square">Edit</i>
+                    </a>
+                    <a class="btn btn-primary h-40" asp-controller="product" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="bi bi-trash">Delete</i>
+                    </a>
+
+                </td>
+            </tr>
+        }
+
+    </table>
 </div>
-</body>
-</html>
