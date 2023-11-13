@@ -4645,6 +4645,19 @@
         "runtime": {
           "bin/placeholder/Bulky.Models.dll": {}
         }
+      },
+      "Bulky.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "7.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Bulky.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bulky.Utility.dll": {}
+        }
       }
     }
   },
@@ -12844,12 +12857,18 @@
       "type": "project",
       "path": "../Bulky.Models/Bulky.Models.csproj",
       "msbuildProject": "../Bulky.Models/Bulky.Models.csproj"
+    },
+    "Bulky.Utility/1.0.0": {
+      "type": "project",
+      "path": "../Bulky.Utility/Bulky.Utility.csproj",
+      "msbuildProject": "../Bulky.Utility/Bulky.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Bulky.DataAccess >= 1.0.0",
       "Bulky.Models >= 1.0.0",
+      "Bulky.Utility >= 1.0.0",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11"
@@ -12885,6 +12904,9 @@
             },
             "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj": {
               "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj"
+            },
+            "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj": {
+              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj"
             }
           }
         }

@@ -19,12 +19,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using Bulky.Utility;
 
 namespace Bulky_Web.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IUserStore<IdentityUser> _userStore;
         private readonly IUserEmailStore<IdentityUser> _emailStore;
@@ -32,7 +34,8 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityUser> userManager,
+            UserManager<IdentityUser> userManager, //manage user in database
+            RoleManager<IdentityRole> roleManager, //manage role in database
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
@@ -44,6 +47,7 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
         }
 
         /// <summary>
@@ -101,8 +105,17 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
         }
 
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string returnUrl = null)//the method that is called when the page is loaded
         {
+            if (!_roleManager.RoleExistsAsync(SD.Role_Cust).GetAwaiter().GetResult())//if the role does not exist
+            {
+                await _roleManager.CreateAsync(new IdentityRole(SD.Role_Cust));
+                await _roleManager.CreateAsync(new IdentityRole(SD.Role_Employee));
+                await _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin));
+                await _roleManager.CreateAsync(new IdentityRole(SD.Role_Comp));
+                
+                
+            }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }

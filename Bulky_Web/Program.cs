@@ -2,8 +2,10 @@ using Bulky.DataAccess.Data;
 using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.iRepository;
 using Bulky.Models;
+using Bulky.Utility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);// Create a builder with the default services configuration.args is the command line arguments passed to the application.
 
@@ -12,7 +14,7 @@ builder.Services.AddControllersWithViews(); // Add MVC services to the services 
 builder.Services.AddDbContext<ApplicationDbContext>(
     option=>option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 //AddIdentity is a generic method that is used to add the identity to the services container
 
 builder.Services.AddScoped<iCategoryRepository, CategoryRepository>();//AddScoped means that the object will be created once per request within the scope
@@ -27,6 +29,8 @@ builder.Services.AddScoped<iProductRepository, ProductRepository>();
 //we add applicationdbcontext to the services container so that we can use it in the controller class to access the database
 
 //add service for razor page 
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages();
 
 
