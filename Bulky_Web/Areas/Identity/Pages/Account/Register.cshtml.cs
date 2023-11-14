@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Bulky.Utility;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Bulky_Web.Areas.Identity.Pages.Account
 {
@@ -102,6 +104,12 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            
+            
+            public string? Role { get; set; }
+            [ValidateNever]
+            public IEnumerable<SelectListItem> RolesList { get; set; }
+            
         }
 
 
@@ -116,11 +124,20 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
                 
                 
             }
+            
+            //create a list of roles
+            Input = new()
+            {
+                RolesList = _roleManager.Roles.Select(x => x.Name).Select(x => new SelectListItem(x, x))
+
+            };
+          
+            
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)//the method that is called when the submit button is clicked
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -132,9 +149,14 @@ namespace Bulky_Web.Areas.Identity.Pages.Account
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);//inserts in db
 
-                if (result.Succeeded)
+                if (result.Succeeded)//if the user is created
                 {
                     _logger.LogInformation("User created a new account with password.");
+                    
+                    //asign the role
+                    await _userManager.AddToRoleAsync(user, Input.Role);
+                    //add default address
+                 
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
