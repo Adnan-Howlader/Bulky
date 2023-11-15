@@ -21,6 +21,8 @@ builder.Services.AddScoped<iCategoryRepository, CategoryRepository>();//AddScope
 //here we are addding dependency injection of implementation of icategoryrepository by categoryrepository
 
 builder.Services.AddScoped<iProductRepository, ProductRepository>();
+
+builder.Services.AddScoped<iCompanyRepository, CompanyRepository>();
 //option.UseSqlServer() means that we are using sql server as the database
 //option is the parameter of the lambda expression and option is used to configure the options for the dbcontext
 //parameter is the type of the dbcontext

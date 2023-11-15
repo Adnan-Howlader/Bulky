@@ -16,6 +16,30 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Areas/Admin/Views/Company/create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFueS9jcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Areas/Admin/Views/Company/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFueS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Areas/Admin/Views/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFueS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Areas/Admin/Views/Company/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ29tcGFueS9pbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Areas/Admin/Views/Category/create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQ2F0ZWdvcnkvY3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

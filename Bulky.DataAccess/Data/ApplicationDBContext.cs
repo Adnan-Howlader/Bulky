@@ -24,6 +24,8 @@ public class ApplicationDbContext:IdentityDbContext
     
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     
+    public DbSet<Company> Companies { get; set; }
+    
     
     //dbset<> is used to create a table in the database and pass the model class as the parameter
     

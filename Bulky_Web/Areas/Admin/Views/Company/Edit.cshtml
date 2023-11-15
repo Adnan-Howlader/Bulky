@@ -1,0 +1,94 @@
+@model Company 
+<!--what it means?-->
+
+<!--model is populated with specific controller of the view-->
+<!--model is used to pass data from controller to view and vice versa(post method)-->
+<!--if model is not specified then it will be object by default-->
+
+
+
+
+
+
+
+<!--create a form to submit data to the controller-->
+
+
+<form method="post">
+    <div class="border p-4 mb-4">
+        <h2>Update Company</h2>
+        
+        <!--create a div for ID-->
+        
+     
+        @* create a hidden property of id because id might be set to 0 and 0 means create new obj in db *@
+        <input type="hidden" asp-for="Id" />
+        
+   
+        <div class="p-2">
+            <label asp-for="Name"></label><!--asp-for is used to bind the label with the model property-->
+            <input asp-for="Name" class="form-control" /> <!--asp-for is used to bind the input with the model property-->
+            <!--input type is controlled by the model property type-->
+            <!--show the error message if there is any-->
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        
+        <div class="p-2">
+                    <label asp-for="StreetAddress"></label> 
+                    <input  asp-for="StreetAddress" class="form-control" />
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="StreetAddress" class="text-danger"></span>
+        </div>
+                
+             
+                
+                
+                
+                <div class="p-2">
+                    <label asp-for="City"></label> 
+                    <input  asp-for="City" class="form-control" />
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                
+                <div class="p-2">
+                    <label asp-for="State"></label> 
+                    <input  asp-for="State" class="form-control" />
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+                
+                <div class="p-2">
+                    <label asp-for="PostalCode"></label>
+                    <input  asp-for="PostalCode" class="form-control" />
+                    <!--input type is controlled by the model property type-->
+                    <!--show the error message if there is any-->
+                    <span asp-validation-for="PostalCode" class="text-danger"></span>
+                </div>
+        
+        
+
+        
+        <div class="p-2">
+            <input type="submit" value="Update" class="btn btn-primary" />
+            <a asp-controller="Company" asp-action="Index" class="btn btn-primary">Back to list</a>
+        </div>
+            
+        
+    </div>
+
+
+</form>
+<!--what will be posted?-->
+<!--the model class object will be posted to the controller because of first line  -->
+
+
+@*creating client side validation*@
+@section Scripts{
+    @*contains the script for client side validation*@
+    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} <!--this will render the validation script-->
+}

@@ -1,11 +1,13 @@
 using Bulky.DataAccess.Repository.iRepository;
 using Bulky.Models;
+using Bulky.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bulky_Web.Areas.Admin.Controllers;
 
 [Area("Admin")]//this attribute tells the compiler that this controller belongs to the admin area
-
+[Authorize(Roles = SD.Role_Admin)]
 public class CategoryController : Controller
 {
 

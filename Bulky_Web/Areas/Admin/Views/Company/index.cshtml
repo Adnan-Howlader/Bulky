@@ -1,0 +1,62 @@
+@model List<Company> 
+<!--declaring the type of parameter passed from controller above-->
+
+
+
+<!--include partial view for notification-->
+@Html.Partial("_Notification")
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Company List</h2>
+        </div>
+        <div class="col-md-6">
+            <a class="btn btn-primary float-end" asp-controller="Company" asp-action="Create">Create New Company</a>
+
+        </div>
+        
+    </div>
+
+
+
+    <table class="table table-bordered table-striped ">
+        <tr>
+            <th>Company Name</th>
+            <th>Display order</th>
+      
+            <th></th>
+        </tr>
+
+
+
+
+        @foreach (var item in Model) //Model is the list of Company object passed from controller
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.StreetAddress</td>
+                <td>@item.City</td>
+                <td>@item.State</td>
+                <td>@item.PostalCode</td>
+
+                <td>
+                  
+                    
+                    <a class="btn btn-primary h-40" asp-controller="Company" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="bi bi-pencil-square">Edit</i>
+                    </a>
+                    <a class="btn btn-primary h-40" asp-controller="Company" asp-action="Delete" asp-route-id="@item.Id">
+                        <i class="bi bi-trash">Delete</i>
+                    </a>
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+
