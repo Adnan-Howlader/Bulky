@@ -30,6 +30,14 @@
             <div class="form-check mb-3">
                 <select asp-for="@Model.Input.Role" asp-items="@Model.Input.RolesList" class="form-select"></select>
             </div>
+            
+        
+            <div class="form-check mb-3">
+                <select asp-for="@Model.Input.CompanyId" asp-items="@Model.Input.CompanyList" class="form-select"></select>
+                </div>
+                
+         
+         
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
     </div>
@@ -66,5 +74,31 @@
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    <partial name="_ValidationScriptsPartial"/>
+    <!--show company list div if the role is company-->
+    <script>
+    //if the document is ready ,run a function
+    //    Input_Role
+       //   Input_CompanyId
+    $(document).ready(function () {
+        $("#Input_CompanyId").hide();// hide it first
+        $("#Input_Role").change(function () {
+            var selection_value=$("#Input_Role option:selected").text();
+            if (selection_value === "Company") {
+                $("#Input_CompanyId").show();
+            }
+            else {
+                $("#Input_CompanyId").hide();
+            }
+        });
+ 
+   
+    });
+    
+       
+    </script>
+    
+
+
+
 }
