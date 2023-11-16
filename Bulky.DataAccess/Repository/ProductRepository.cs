@@ -11,6 +11,8 @@ public class ProductRepository: Repository<Product>, iProductRepository
     {
         _db = db;
     }
+    
+  
 
     public void Update(Product obj)
     {

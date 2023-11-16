@@ -23,6 +23,8 @@ builder.Services.AddScoped<iCategoryRepository, CategoryRepository>();//AddScope
 builder.Services.AddScoped<iProductRepository, ProductRepository>();
 
 builder.Services.AddScoped<iCompanyRepository, CompanyRepository>();
+
+builder.Services.AddScoped<iShoppingCartRepository, ShoppingCartRepository>();
 //option.UseSqlServer() means that we are using sql server as the database
 //option is the parameter of the lambda expression and option is used to configure the options for the dbcontext
 //parameter is the type of the dbcontext

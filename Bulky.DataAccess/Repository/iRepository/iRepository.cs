@@ -10,7 +10,7 @@ namespace Bulky.DataAccess.Repository.iRepository;
 
 public interface iRepository<T> where T : class
 {
-   IEnumerable<T> GetAll();//Get All Records and return IEnumerable
+   IEnumerable<T> GetAll(Expression<Func<T, bool>> filter=null);//Get All Records and return IEnumerable
    T Get(Expression<Func<T, bool>> filter);//Get Record by filter and return T
    void Add(T entity);//Add Record
    void Remove(T entity);//Remove Record 

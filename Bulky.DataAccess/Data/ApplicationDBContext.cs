@@ -26,6 +26,8 @@ public class ApplicationDbContext:IdentityDbContext
     
     public DbSet<Company> Companies { get; set; }
     
+    public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+    
     
     //dbset<> is used to create a table in the database and pass the model class as the parameter
     

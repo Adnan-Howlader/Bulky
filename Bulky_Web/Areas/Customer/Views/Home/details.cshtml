@@ -1,36 +1,40 @@
 
-@model Tuple<Product,Category>
+@model ShoppingCart
 
 
 
 
 
+<form method="post">
 
-
-<div class="col-lg-12 col-sm-6">
+<div  class="col-lg-12 col-sm-6">
     <div class="row p-2">
         <div class="col-3 p-1">
             <div class="card border-0 p-3 shadow border-top border-5 rounded">
-                <img src="@Model.Item1.ImageUrl" class="card-img-top rounded"/>
+                <img src="@Model.Product.ImageUrl" class="card-img-top rounded"/>
             </div>
         </div>
         <div class="col-9 p-3">
             <div class="card-body">
-                <h5>@Model.Item1.Title</h5>
-                <p>by @Model.Item1.Director</p>
-                <p>Price: @Model.Item1.Price$</p>
-                <p>Category: @Model.Item2.Name</p>
-                <p>Sypnosis: @Model.Item1.Description</p>
+                
+                <h5>@Model.Product.Title</h5>
+                <p >product number: @Model.Product.Id</p>
+                <p>by @Model.Product.Director</p>
+                <p>Price: @Model.Product.Price$</p>
+
+                <p>Sypnosis: @Model.Product.Description</p>
+
             </div>
          
             <div>
-                <input  type="number" id="incrementAmountInput" min="1" value="1" max="5" />
+                
+                <input asp-for="@Model.Count" type="number" id="incrementAmountInput" min="1" value="1" max="5"/>
             </div>
             
             <div class="btn-group p-2 ">
              
                 
-                <button id="cart" class="btn btn-primary">Add to Cart</button>
+                <button id="cart" class="btn btn-primary" type="submit" >Add to Cart</button>
                
 
 
@@ -42,6 +46,7 @@
 
 
 </div>
+</form>
 
 <script>
     let amount = 1;

@@ -18,10 +18,15 @@ public class Repository<T>:iRepository<T> where T : class
         dbSet = _db.Set<T>();//Set is a method that returns a dbset
     }
     
-    public IEnumerable<T> GetAll()//Get All Records and return IEnumerable
+    public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter=null)//Get All Records and return IEnumerable
     {
         IQueryable<T> query = dbSet;
+        if(filter!=null)
+        {
+            query = query.Where(filter);
+        }
         return query.ToList();
+        
     }
 
     public T Get(Expression<Func<T,bool>>filter)//T=>filter where T is parameter,filter is the expression and returns bool
