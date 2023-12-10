@@ -4633,23 +4633,23 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Bulky.DataAccess/1.0.0": {
+      "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Bulky.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore": "7.0.12",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12",
+          "Models": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Bulky.DataAccess.dll": {}
+          "bin/placeholder/DataAccess.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Bulky.DataAccess.dll": {}
+          "bin/placeholder/DataAccess.dll": {}
         }
       },
-      "Bulky.Models/1.0.0": {
+      "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -4657,23 +4657,23 @@
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "compile": {
-          "bin/placeholder/Bulky.Models.dll": {}
+          "bin/placeholder/Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Bulky.Models.dll": {}
+          "bin/placeholder/Models.dll": {}
         }
       },
-      "Bulky.Utility/1.0.0": {
+      "Utility/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.UI": "7.0.13"
         },
         "compile": {
-          "bin/placeholder/Bulky.Utility.dll": {}
+          "bin/placeholder/Utility.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Bulky.Utility.dll": {}
+          "bin/placeholder/Utility.dll": {}
         }
       }
     }
@@ -12888,31 +12888,31 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Bulky.DataAccess/1.0.0": {
+    "DataAccess/1.0.0": {
       "type": "project",
-      "path": "../Bulky.DataAccess/Bulky.DataAccess.csproj",
-      "msbuildProject": "../Bulky.DataAccess/Bulky.DataAccess.csproj"
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     },
-    "Bulky.Models/1.0.0": {
+    "Models/1.0.0": {
       "type": "project",
-      "path": "../Bulky.Models/Bulky.Models.csproj",
-      "msbuildProject": "../Bulky.Models/Bulky.Models.csproj"
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
     },
-    "Bulky.Utility/1.0.0": {
+    "Utility/1.0.0": {
       "type": "project",
-      "path": "../Bulky.Utility/Bulky.Utility.csproj",
-      "msbuildProject": "../Bulky.Utility/Bulky.Utility.csproj"
+      "path": "../Utility/Utility.csproj",
+      "msbuildProject": "../Utility/Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Bulky.DataAccess >= 1.0.0",
-      "Bulky.Models >= 1.0.0",
-      "Bulky.Utility >= 1.0.0",
+      "DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.13",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.11",
-      "Stripe.net >= 43.3.0"
+      "Models >= 1.0.0",
+      "Stripe.net >= 43.3.0",
+      "Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12940,14 +12940,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj": {
-              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj"
+            "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj": {
+              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj"
             },
-            "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj": {
-              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj"
+            "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj": {
+              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj"
             },
-            "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj": {
-              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj"
+            "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj": {
+              "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj"
             }
           }
         }

@@ -8,13 +8,13 @@
     ".NETCoreApp,Version=v7.0": {
       "Bulky_Web/1.0.0": {
         "dependencies": {
-          "Bulky.DataAccess": "1.0.0",
-          "Bulky.Models": "1.0.0",
-          "Bulky.Utility": "1.0.0",
+          "DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Identity.UI": "7.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.13",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "7.0.11",
-          "Stripe.net": "43.3.0"
+          "Models": "1.0.0",
+          "Stripe.net": "43.3.0",
+          "Utility": "1.0.0"
         },
         "runtime": {
           "Bulky_Web.dll": {}
@@ -2831,32 +2831,32 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "Bulky.DataAccess/1.0.0": {
+      "DataAccess/1.0.0": {
         "dependencies": {
-          "Bulky.Models": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.12",
           "Microsoft.EntityFrameworkCore": "7.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.12",
+          "Models": "1.0.0"
         },
         "runtime": {
-          "Bulky.DataAccess.dll": {}
+          "DataAccess.dll": {}
         }
       },
-      "Bulky.Models/1.0.0": {
+      "Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.UI": "7.0.13",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0"
         },
         "runtime": {
-          "Bulky.Models.dll": {}
+          "Models.dll": {}
         }
       },
-      "Bulky.Utility/1.0.0": {
+      "Utility/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.UI": "7.0.13"
         },
         "runtime": {
-          "Bulky.Utility.dll": {}
+          "Utility.dll": {}
         }
       }
     }
@@ -4729,17 +4729,17 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "Bulky.DataAccess/1.0.0": {
+    "DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Bulky.Models/1.0.0": {
+    "Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Bulky.Utility/1.0.0": {
+    "Utility/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

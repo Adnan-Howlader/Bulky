@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "auq4Kf8ROvFzC9K435b9PKXT2H/0bViLs3/NYQymqj9vZ3oNHNAXcdsC0ZIJDbSFkt9bCZD10f8JEmTLSUSwCQ==",
+  "success": true,
+  "projectFilePath": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj",
+  "expectedPackageFiles": [
+    "/Users/adnanhowlader/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.13/microsoft.aspnetcore.cryptography.internal.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.13/microsoft.aspnetcore.cryptography.keyderivation.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.aspnetcore.identity.ui/7.0.13/microsoft.aspnetcore.identity.ui.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.fileproviders.abstractions/7.0.0/microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.fileproviders.embedded/7.0.13/microsoft.extensions.fileproviders.embedded.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.identity.core/7.0.13/microsoft.extensions.identity.core.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.identity.stores/7.0.13/microsoft.extensions.identity.stores.7.0.13.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.logging/7.0.0/microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/Users/adnanhowlader/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

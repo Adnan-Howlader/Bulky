@@ -4,14 +4,14 @@
     "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj": {}
   },
   "projects": {
-    "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj": {
+    "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj",
-        "projectName": "Bulky.DataAccess",
-        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj",
+        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj",
+        "projectName": "Bulky_Web",
+        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj",
         "packagesPath": "/Users/adnanhowlader/.nuget/packages/",
-        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/obj/",
+        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adnanhowlader/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,94 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj": {
-                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj"
+              "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj": {
+                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj"
+              },
+              "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj": {
+                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj"
+              },
+              "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj": {
+                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[43.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/DataAccess.csproj",
+        "packagesPath": "/Users/adnanhowlader/.nuget/packages/",
+        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/adnanhowlader/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj": {
+                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj"
               }
             }
           }
@@ -87,14 +173,14 @@
         }
       }
     },
-    "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj": {
+    "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj",
-        "projectName": "Bulky.Models",
-        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj",
+        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj",
+        "projectName": "Models",
+        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Models/Models.csproj",
         "packagesPath": "/Users/adnanhowlader/.nuget/packages/",
-        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/obj/",
+        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adnanhowlader/.nuget/NuGet/NuGet.Config"
@@ -150,14 +236,14 @@
         }
       }
     },
-    "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj": {
+    "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj",
-        "projectName": "Bulky.Utility",
-        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj",
+        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj",
+        "projectName": "Utility",
+        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/Utility.csproj",
         "packagesPath": "/Users/adnanhowlader/.nuget/packages/",
-        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/obj/",
+        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/adnanhowlader/.nuget/NuGet/NuGet.Config"
@@ -201,92 +287,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj",
-        "projectName": "Bulky_Web",
-        "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/Bulky_Web.csproj",
-        "packagesPath": "/Users/adnanhowlader/.nuget/packages/",
-        "outputPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/Users/adnanhowlader/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj": {
-                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.DataAccess/Bulky.DataAccess.csproj"
-              },
-              "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj": {
-                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Models/Bulky.Models.csproj"
-              },
-              "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj": {
-                "projectPath": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky.Utility/Bulky.Utility.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.UI": {
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.13, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.11, )"
-            },
-            "Stripe.net": {
-              "target": "Package",
-              "version": "[43.3.0, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

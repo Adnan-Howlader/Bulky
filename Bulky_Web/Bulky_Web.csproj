@@ -5,14 +5,15 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>Bulky_Web</RootNamespace>
     </PropertyGroup>
     
     <ItemGroup>
 
-        <ProjectReference Include="..\Bulky.DataAccess\Bulky.DataAccess.csproj" />
+        <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
 
-        <ProjectReference Include="..\Bulky.Models\Bulky.Models.csproj" />
-        <ProjectReference Include="..\Bulky.Utility\Bulky.Utility.csproj" />
+        <ProjectReference Include="..\Models\Models.csproj" />
+        <ProjectReference Include="..\Utility\Utility.csproj" />
         
     </ItemGroup>
     

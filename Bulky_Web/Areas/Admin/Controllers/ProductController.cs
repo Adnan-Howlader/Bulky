@@ -69,8 +69,8 @@ public class ProductController:Controller
       
         {
             //upload image
-            string webRootPath = _webHostEnvironment.WebRootPath;//get the root path of the web
-            string filepath= Path.Combine(webRootPath, @"images/product"); //combine the root path with the images folder
+            string webRootPath = _webHostEnvironment.WebRootPath;//get the Bulky_Web path of the web
+            string filepath= Path.Combine(webRootPath, @"images/product"); //combine the Bulky_Web path with the images folder
             string filename = Guid.NewGuid().ToString()+".jpg"; //generate a unique name for the image
             
          
@@ -146,8 +146,8 @@ public class ProductController:Controller
       
         {
             //upload image
-            string webRootPath = _webHostEnvironment.WebRootPath;//get the root path of the web
-            string filepath= Path.Combine(webRootPath, @"images/product"); //combine the root path with the images folder
+            string webRootPath = _webHostEnvironment.WebRootPath;//get the Bulky_Web path of the web
+            string filepath= Path.Combine(webRootPath, @"images/product"); //combine the Bulky_Web path with the images folder
             string filename = Guid.NewGuid().ToString()+".jpg";//generate a unique name for the image
             
             //save the image in the folder
