@@ -42,22 +42,13 @@ public class HomeController : Controller
         {
             
             ProductId= id,
-            Product = _productRepository.Get(p => p.Id == id)
+            Product = _productRepository.Get(p => p.Id == id,includeProperties:"Category"),
             
             
         };
 
         
         
-        
-       
-        //get the category name from category id 
-        Category category=_categoryRepository.Get(c=>c.Id==cart.Product.CategoryId);
-        
-       //make a tuplemodel
-        Tuple<ShoppingCart,Category> tuple=new Tuple<ShoppingCart,Category>(cart,category);
-        
-        //return the tuple model
         return View(cart);//index parameter is passed to the view method
         
        

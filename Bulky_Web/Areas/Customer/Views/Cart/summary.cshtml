@@ -1,18 +1,62 @@
-@model TModel
 
-@{
-    Layout = null;
-}
+@model ShoppingCartVM
 
-<!DOCTYPE html>
+<div class="container mt-5">
+  <h2>Shipping details</h2>
+  <form method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input asp-for="@Model.OrderHeader.Name" type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input asp-for= "@Model.OrderHeader.PhoneNumber"  type="tel" class="form-control" id="phone" required >
+    </div>
+    <div class="form-group">
+      <label for="address">Street Address:</label>
+      <input asp-for="@Model.OrderHeader.StreetAddress" type="text" class="form-control" id="address" required>
+    </div>
+    <div class="form-group">
+      <label for="city">City:</label>
+      <input asp-for="@Model.OrderHeader.City" type="text" class="form-control" id="city" required>
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <input asp-for="@Model.OrderHeader.State" type="text" class="form-control" id="state" required>
+    </div>
+    <div class="form-group">
+      <label for="postalCode">Postal Code:</label>
+      <input asp-for="@Model.OrderHeader.PostalCode" type="text" class="form-control" id="postalCode" required>
+    </div>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+    <!-- Product Order Section -->
+    <h3>Order summary</h3>
+    @foreach(var cart in @Model.ListCart)
+    {
+      <div class="form-group">
+        <label for="productTitle">Product Title:</label>
+        <input type="text" class="form-control" id="productTitle" value="@cart.Product.Title" disabled>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" class="form-control" id="quantity" value="@cart.Count" disabled>
+      </div>
+     
+    }
+  
+
+
+
+    <!-- Order Summary Section -->
+    <div class="mt-4">
+      <h3>Order Summary</h3>
+      <ul id="orderSummary" class="list-group">
+        <!-- Order summary will be displayed here -->
+      </ul>
+      <p id="totalCost">Total Cost: $@Model.OrderHeader.OrderTotal</p>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit Order</button>
+  </form>
 </div>
-</body>
-</html>
+

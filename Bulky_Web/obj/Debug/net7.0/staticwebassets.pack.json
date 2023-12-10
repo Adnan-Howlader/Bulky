@@ -69,8 +69,16 @@
       "PackagePath": "staticwebassets/images/product/b7b8404c-c28c-42be-aa3a-5888746e589a.jpg"
     },
     {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/d195171d-7104-4154-b37c-86c825d84043.jpg",
+      "PackagePath": "staticwebassets/images/product/d195171d-7104-4154-b37c-86c825d84043.jpg"
+    },
+    {
       "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/dc5a6882-a6a2-4e9a-b2c8-dfb1cf99010b.jpg",
       "PackagePath": "staticwebassets/images/product/dc5a6882-a6a2-4e9a-b2c8-dfb1cf99010b.jpg"
+    },
+    {
+      "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/js/order.js",
+      "PackagePath": "staticwebassets/js/order.js"
     },
     {
       "Id": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/js/site.js",

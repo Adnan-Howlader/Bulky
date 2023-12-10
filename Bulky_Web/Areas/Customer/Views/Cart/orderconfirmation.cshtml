@@ -1,18 +1,16 @@
-@model dynamic
+@model int
 
-@{
-    Layout = null;
-}
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>title</title>
-</head>
-<body>
-<div>
-      
+
+<div class="container confirmation-container">
+    <h2>Order Confirmation</h2>
+    <p>Your order has been successfully placed!</p>
+
+    <!-- Display Order ID (You can generate this dynamically on the server side) -->
+    <p>Order ID: <strong>@Model</strong></p>
+
+    <p>Thank you for shopping with us. Your items will be shipped shortly.</p>
+
+ 
 </div>
-</body>
-</html>

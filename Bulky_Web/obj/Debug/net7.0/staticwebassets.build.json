@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "o9xwlyOpztnJaFV1QKqfpgjdWX48WO5D0LkdgrNXyCs=",
+  "Hash": "zJcbOcMFH5bL7bcHj91EzEb3ZO3NLhhpWjfGTUbb9g4=",
   "Source": "Bulky_Web",
   "BasePath": "_content/Bulky_Web",
   "Mode": "Default",
@@ -1326,6 +1326,23 @@
       "OriginalItemSpec": "wwwroot/images/product/b7b8404c-c28c-42be-aa3a-5888746e589a.jpg"
     },
     {
+      "Identity": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/d195171d-7104-4154-b37c-86c825d84043.jpg",
+      "SourceId": "Bulky_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/",
+      "BasePath": "_content/Bulky_Web",
+      "RelativePath": "images/product/d195171d-7104-4154-b37c-86c825d84043.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/product/d195171d-7104-4154-b37c-86c825d84043.jpg"
+    },
+    {
       "Identity": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/images/product/DarkKnight.jpg",
       "SourceId": "Bulky_Web",
       "SourceType": "Discovered",
@@ -1358,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/product/dc5a6882-a6a2-4e9a-b2c8-dfb1cf99010b.jpg"
+    },
+    {
+      "Identity": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/js/order.js",
+      "SourceId": "Bulky_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/",
+      "BasePath": "_content/Bulky_Web",
+      "RelativePath": "js/order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/order.js"
     },
     {
       "Identity": "/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/wwwroot/js/site.js",

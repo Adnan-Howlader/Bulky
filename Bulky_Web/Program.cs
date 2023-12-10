@@ -6,6 +6,7 @@ using Bulky.Utility;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);// Create a builder with the default services configuration.args is the command line arguments passed to the application.
 
@@ -25,6 +26,12 @@ builder.Services.AddScoped<iProductRepository, ProductRepository>();
 builder.Services.AddScoped<iCompanyRepository, CompanyRepository>();
 
 builder.Services.AddScoped<iShoppingCartRepository, ShoppingCartRepository>();
+
+builder.Services.AddScoped<iApplicationUserRepository, ApplicationUserRepository>();
+
+builder.Services.AddScoped<iOrderHeaderRepository, OrderHeaderRepository>();
+
+builder.Services.AddScoped<iOrderDetailRepository, OrderDetailRepository>();
 //option.UseSqlServer() means that we are using sql server as the database
 //option is the parameter of the lambda expression and option is used to configure the options for the dbcontext
 //parameter is the type of the dbcontext
@@ -36,6 +43,10 @@ builder.Services.AddScoped<iShoppingCartRepository, ShoppingCartRepository>();
 
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages();
+
+//stripe value injection
+
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));//get the value of stripe from appsettings.json
 
 
 
@@ -51,6 +62,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+StripeConfiguration.ApiKey = app.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 
 app.UseRouting();
 
