@@ -15,7 +15,7 @@ public class ShoppingCart
     [ValidateNever]
     public Product Product { get; set; }
     
-    [Range(1, 5,ErrorMessage ="Please enter a value between 1 and 5")]
+  //  [Range(1, 5,ErrorMessage ="Please enter a value between 1 and 5")]
     public int Count { get; set; }
     
     public string ApplicationUserId { get; set; }
