@@ -138,8 +138,21 @@ public class CartController : Controller
             //regular customer
             //stripe logic
             //pay and you will get orderconfirmation 
-
+            //check if environment is development
             var domain = "https://localhost:7241";
+
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            {
+                 domain = "movieflix.azurewebsites.net";
+
+            }
+             
+            
+            
+          
+            
+           
+           
             
             var options = new SessionCreateOptions
             {
