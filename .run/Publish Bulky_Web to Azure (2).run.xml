@@ -1,0 +1,39 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Publish Bulky_Web to Azure (2)" type="AzureDotNetWebAppPublish" factoryName="Azure Web App">
+    <option name="AZURE_WEB_APP_PROJECT" value="$PROJECT_DIR$/Bulky_Web/Bulky_Web.csproj" />
+    <option name="AZURE_WEB_APP_CONFIGURATION" value="Release" />
+    <option name="AZURE_WEB_APP_PLATFORM" value="Any CPU" />
+    <option name="AZURE_WEB_APP_SUBSCRIPTION_ID" value="7ccf34a6-0063-4fde-b8c6-5215823bd4e7" />
+    <option name="AZURE_WEB_APP_IS_CREATE_APP" value="0" />
+    <option name="AZURE_WEB_APP_ID" value="/subscriptions/7ccf34a6-0063-4fde-b8c6-5215823bd4e7/resourceGroups/test/providers/Microsoft.Web/sites/movieflix" />
+    <option name="AZURE_WEB_APP_NAME" value="webapp-231223110901" />
+    <option name="AZURE_WEB_APP_IS_CREATE_RESOURCE_GROUP" value="0" />
+    <option name="AZURE_WEB_APP_RESOURCE_GROUP_NAME" value="test" />
+    <option name="AZURE_WEB_APP_OPERATING_SYSTEM" value="WINDOWS" />
+    <option name="AZURE_WEB_APP_IS_CREATE_APP_SERVICE_PLAN" value="0" />
+    <option name="AZURE_WEB_APP_SERVICE_PLAN_ID" value="/subscriptions/7ccf34a6-0063-4fde-b8c6-5215823bd4e7/resourceGroups/test/providers/Microsoft.Web/serverfarms/ASP-test-babf" />
+    <option name="AZURE_WEB_APP_SERVICE_PLAN_NAME" value="appsp-231223110901" />
+    <option name="AZURE_WEB_APP_LOCATION" value="eastus" />
+    <option name="AZURE_WEB_APP_PRICING_TIER" value="S1" />
+    <option name="AZURE_WEB_APP_NET_FRAMEWORK" value="4.7" />
+    <option name="AZURE_WEB_APP_NET_CORE_RUNTIME" value="DOTNETCORE 2.1" />
+    <option name="AZURE_WEB_APP_IS_DEPLOY_TO_SLOT" value="0" />
+    <option name="AZURE_WEB_APP_SLOT_NAME" value="" />
+    <option name="AZURE_WEB_APP_OPEN_BROWSER_PUBLISH" value="0" />
+    <option name="AZURE_SQL_DATABASE_SUBSCRIPTION_ID" value="7ccf34a6-0063-4fde-b8c6-5215823bd4e7" />
+    <option name="AZURE_SQL_DATABASE_IS_ENABLED" value="1" />
+    <option name="AZURE_SQL_DATABASE_CONNECTION_STRING_NAME" value="ConnectionStrings:DefaultConnection" />
+    <option name="AZURE_SQL_DATABASE_IS_CREATE" value="0" />
+    <option name="AZURE_SQL_DATABASE_ID" value="/subscriptions/7ccf34a6-0063-4fde-b8c6-5215823bd4e7/resourceGroups/test/providers/Microsoft.Sql/servers/movieflix/databases/Bulky" />
+    <option name="AZURE_SQL_DATABASE_NAME" value="" />
+    <option name="AZURE_SQL_DATABASE_IS_CREATE_RESOURCE_GROUP" value="0" />
+    <option name="AZURE_SQL_DATABASE_RESOURCE_GROUP_NAME" value="" />
+    <option name="AZURE_SQL_DATABASE_IS_CREATE_SQL_SERVER" value="0" />
+    <option name="AZURE_SQL_DATABASE_SQL_SERVER_ID" value="" />
+    <option name="AZURE_SQL_DATABASE_SQL_SERVER_NAME" value="" />
+    <option name="AZURE_SQL_DATABASE_SQL_SERVER_ADMIN_LOGIN" value="adnanh" />
+    <option name="AZURE_SQL_DATABASE_LOCATION" value="eastus" />
+    <option name="AZURE_SQL_DATABASE_COLLATION" value="SQL_Latin1_General_CP1_CI_AS" />
+    <method v="2" />
+  </configuration>
+</component>

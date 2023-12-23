@@ -1,0 +1,12 @@
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/bin/Release/net7.0/Utility.deps.json
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/bin/Release/net7.0/Utility.dll
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/bin/Release/net7.0/Utility.pdb
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.csproj.AssemblyReference.cache
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.GeneratedMSBuildEditorConfig.editorconfig
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.AssemblyInfoInputs.cache
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.AssemblyInfo.cs
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.csproj.CoreCompileInputs.cache
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.dll
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/refint/Utility.dll
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/Utility.pdb
+/Users/adnanhowlader/RiderProjects/Bulky/Utility/obj/Release/net7.0/ref/Utility.dll
