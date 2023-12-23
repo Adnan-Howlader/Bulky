@@ -26,14 +26,15 @@ public class CartController : Controller
     private readonly iApplicationUserRepository _userRepo;
     private readonly iOrderHeaderRepository _orderHeaderRepo;
     private readonly iOrderDetailRepository _orderDetailRepo;
-
+    private readonly IWebHostEnvironment _webHostEnvironment;
     public CartController(iShoppingCartRepository cartRepo, iApplicationUserRepository userRepo,
-        iOrderHeaderRepository orderHeaderRepo, iOrderDetailRepository orderDetailRepo)
+        iOrderHeaderRepository orderHeaderRepo, iOrderDetailRepository orderDetailRepo,IWebHostEnvironment webHostEnvironment)
     {
         _cartRepo = cartRepo;
         _userRepo = userRepo;
         _orderHeaderRepo = orderHeaderRepo;
         _orderDetailRepo = orderDetailRepo;
+        _webHostEnvironment = webHostEnvironment;
     }
 
     public IActionResult Index()
@@ -140,19 +141,13 @@ public class CartController : Controller
             //pay and you will get orderconfirmation 
             //check if environment is development
             var domain = "https://localhost:7241";
-
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            bool isProduction = _webHostEnvironment.IsProduction();
+            if (isProduction)
             {
                  domain = "movieflix.azurewebsites.net";
 
             }
-             
             
-            
-          
-            
-           
-           
             
             var options = new SessionCreateOptions
             {
@@ -255,3 +250,4 @@ public class CartController : Controller
         return RedirectToAction("Index"); 
     }
 }
+
