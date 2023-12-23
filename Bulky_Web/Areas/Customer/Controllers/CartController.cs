@@ -140,7 +140,7 @@ public class CartController : Controller
             //stripe logic
             //pay and you will get orderconfirmation 
             //check if environment is development
-            var domain = "movieflix.azurewebsites.net";
+            var domain = "https://movieflix.azurewebsites.net";
             bool isProduction = _webHostEnvironment.IsProduction();
             if (!isProduction)
             {
