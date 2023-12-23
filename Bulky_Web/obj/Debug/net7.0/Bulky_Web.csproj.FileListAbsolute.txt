@@ -269,3 +269,4 @@
 /Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/bin/Debug/net7.0/Utility.dll
 /Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/bin/Debug/net7.0/Models.pdb
 /Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/bin/Debug/net7.0/Utility.pdb
+/Users/adnanhowlader/RiderProjects/Bulky/Bulky_Web/bin/Debug/net7.0/appsettings.Production.json
