@@ -179,7 +179,7 @@ public class CartController : Controller
             _orderDetailRepo.Save();
             
             Response.Headers.Add("Location", session.Url);//redirect to stripe payment page
-            return new StatusCodeResult(303);
+            return RedirectToAction("orderconfirmation",new{orderheaderid = vm.OrderHeader.Id});
             
         }
 
