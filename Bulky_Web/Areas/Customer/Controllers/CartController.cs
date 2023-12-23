@@ -211,7 +211,7 @@ public class CartController : Controller
         List<ShoppingCart> carts = _cartRepo.GetAll(u => u.ApplicationUserId == orderHeader.ApplicationUserId).ToList();
         _cartRepo.RemoveRange(carts);
         
-        _cartRepo.Save();
+        _cartRepo.Save(); //clearing carts after payment
         
         return View(orderheaderid);
     }
