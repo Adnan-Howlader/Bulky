@@ -1,3 +1,2 @@
-Deployed in Azure. Since it is ongoing project, there can be some minor bugs
-
+Deployed in Azure.
 https://movieflix.azurewebsites.net/
