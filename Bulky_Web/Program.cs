@@ -52,6 +52,8 @@ builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Str
 
 var app = builder.Build();// Build the app.
 
+var isDevelopment = app.Environment.IsDevelopment();
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -78,4 +80,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
 
+
 app.Run();
+

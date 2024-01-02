@@ -59,7 +59,7 @@ public class HomeController : Controller
     
     //post method
     [HttpPost]
-    [Authorize] //must be logged in user
+
     public IActionResult Details(ShoppingCart cart)
     {
         
