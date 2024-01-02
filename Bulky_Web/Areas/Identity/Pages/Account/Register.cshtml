@@ -1,8 +1,11 @@
 ﻿@page
 @model RegisterModel
+
 @{
     ViewData["Title"] = "Register";
 }
+
+
 
 <h1>@ViewData["Title"]</h1>
 
@@ -31,7 +34,11 @@
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
             <div class="form-check mb-3">
-                <select asp-for="@Model.Input.Role" asp-items="@Model.Input.RolesList" class="form-select"></select>
+                <select asp-for="@Model.Input.Role" class="form-select">
+                        <option value="Customer">Customer</option>
+                        <option value="Company">Company</option>
+                       
+                </select>
             </div>
             
         
