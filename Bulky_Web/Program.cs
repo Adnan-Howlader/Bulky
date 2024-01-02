@@ -3,6 +3,7 @@ using Bulky.DataAccess.Repository;
 using Bulky.DataAccess.Repository.iRepository;
 using Bulky.Models;
 using Bulky.Utility;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -49,6 +50,22 @@ builder.Services.AddRazorPages();
 builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));//get the value of stripe from appsettings.json
 
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = $"/Identity/Account/Login";
+    options.LogoutPath = $"/Identity/Account/Logout";
+    options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
+});
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+       
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.SlidingExpiration = true;
+        options.AccessDeniedPath = "/Forbidden/";
+    });
+
+
 
 var app = builder.Build();// Build the app.
 
@@ -75,6 +92,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages(); 
+
 
 app.MapControllerRoute(
     name: "default",
